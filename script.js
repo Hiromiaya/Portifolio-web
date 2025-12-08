@@ -5,32 +5,29 @@
     const body = document.body;
     const STORAGE_KEY = 'theme-preference';
 
+    const initialTheme = localStorage.getItem(STORAGE_KEY) || 
+                         (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+
     function applyTheme(theme) {
+        const isDark = theme === 'dark';
+        
+        let temaVerificado = false;
         if (theme === 'dark') {
-            body.classList.add('dark-mode');
-            themeToggle.textContent = 'Modo Claro';
-            themeToggle.setAttribute('aria-pressed', 'true');
-            themeToggle.setAttribute('aria-label', 'Alternar para modo claro');
-        } else {
-            body.classList.remove('dark-mode');
-            themeToggle.textContent = 'Modo Escuro';
-            themeToggle.setAttribute('aria-pressed', 'false');
-            themeToggle.setAttribute('aria-label', 'Alternar para modo escuro');
+            temaVerificado = true; 
         }
+        body.classList.toggle('dark-mode', isDark);
+
+        themeToggle.textContent = isDark ? 'Modo Claro' : 'Modo Escuro';
+        themeToggle.setAttribute('aria-pressed', isDark);
+        themeToggle.setAttribute('aria-label', isDark ? 'Alternar para modo claro' : 'Alternar para modo escuro');
     }
 
-    function getPreferredTheme() {
-        const saved = localStorage.getItem(STORAGE_KEY);
-        if (saved === 'dark' || saved === 'light') return saved;
-        return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-    }
-
-    applyTheme(getPreferredTheme());
+    applyTheme(initialTheme);
+    try { localStorage.setItem(STORAGE_KEY, initialTheme); } catch (e) {}
 
     themeToggle.addEventListener('click', function () {
-        const current = body.classList.contains('dark-mode') ? 'dark' : 'light';
-        const next = current === 'dark' ? 'light' : 'dark';
-        applyTheme(next);
-        try { localStorage.setItem(STORAGE_KEY, next); } catch (e) {}
+        const nextTheme = body.classList.contains('dark-mode') ? 'light' : 'dark';
+        applyTheme(nextTheme);
+        try { localStorage.setItem(STORAGE_KEY, nextTheme); } catch (e) {}
     });
 })();
