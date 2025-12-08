@@ -3,10 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Portfólio</title>
+    <title>Isaac Alessandro | Sobre Mim</title>
+    <meta name="description" content="Isaac Alessandro — Desenvolvedor backend focado em Python, Flask e arquitetura de sistemas.">
+    <link rel="icon" href="favicon.ico">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <a class="skip-link" href="#main-content">Pular para o conteúdo</a>
 
     <header>
         <h1>Isaac Alessandro</h1>
@@ -14,29 +18,45 @@
             <ul>
                 <li><a href="index.html">Início</a></li>
                 <li><a href="projetos.html">Projetos</a></li>
-                <li><a href="sobre.html">Sobre Mim</a></li>
+                <li><a href="sobre.html" aria-current="page">Sobre Mim</a></li>
             </ul>
         </nav>
 
-        <button id="theme-toggle">Modo Escuro</button>
+        <button id="theme-toggle" aria-label="Alternar modo de cor">Modo Escuro</button>
 
     </header>
 
-    <main>
-        <section class="hero">
-            <h2>Olá, eu sou Isaac Alessandro</h2>
-            <p>Desenvolvedor focado em python e backend.</p>
-            <a href="contato.html" class="cta-button">Entre em Contato</a>
-        </section>
+    <main id="main-content">
+        <section class="perfil">
+            <h2>Minha História e Habilidades</h2>
 
-        </main>
+            <p>Olá! Eu sou Isaac Alessandro, um desenvolvedor focado principalmente em <strong>Python</strong> e arquiteturas de <strong>Backend</strong>.</p>
+
+            <div class="habilidades">
+                <h3>Minhas Principais Habilidades</h3>
+                <ul class="habilidades-list">
+                    <li>
+                        <h4>Python e Frameworks</h4>
+                        <p>Experiência com Flask para desenvolvimento web e APIs.</p>
+                    </li>
+                    <!-- adicione outros itens aqui -->
+                </ul>
+            </div>
+        </section>
+    </main>
 
     <footer>
-        <p>Siga-me nas redes:</p>
-        </aside>
+        <div class="social">
+            <p>Siga-me nas redes:</p>
+            <ul>
+                <li><a href="#" aria-label="GitHub de Isaac">GitHub</a></li>
+                <li><a href="#" aria-label="LinkedIn de Isaac">LinkedIn</a></li>
+            </ul>
+        </div>
+        <p>&copy; 2025 Isaac Alessandro.</p>
     </footer>
-    
-    <script src="script.js"></script>
+
+    <script src="script.js" defer></script>
 
 </body>
 </html>
