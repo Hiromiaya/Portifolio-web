@@ -1,4 +1,3 @@
-// 1. Variável themeSwitch deve ser declarada com const e verificada
 const themeSwitch = document.getElementById('theme-switch');
 if (!themeSwitch) {
     console.error("theme-switch não encontrado.");
