@@ -4,8 +4,6 @@
     --muted: #666666;
     --primary: #333333;
     --accent: #007bff;
-    --header-bg: #333333;
-    --header-text: #ffffff;
 }
 
 * {
@@ -23,20 +21,6 @@ body{
     transition: background-color .25s ease, color .25s ease;
 }
 
-.skip-link {
-    position: absolute;
-    top: -40px;
-    left: 0;
-    background: var(--accent);
-    color: white;
-    padding: 8px;
-    z-index: 100;
-}
-
-.skip-link:focus {
-    top: 0;
-}
-
 .logo{
     font-weight: 700;
     font-size: 1.2rem;
@@ -47,13 +31,8 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px 40px;
-    background-color: var(--header-bg);
-    color: var(--header-text);
-}
-
-nav {
-    flex: 1;
-    margin: 0 40px;
+    background-color: #333;
+    color: white;
 }
 
 nav ul {
@@ -66,96 +45,34 @@ nav ul li {
 }
 
 nav a {
-    color: var(--header-text);
+    color: white;
     text-decoration: none;
-    transition: opacity .2s;
-}
-
-nav a:hover {
-    opacity: 0.8;
 }
 
 #theme-toggle{
     background: transparent;
-    border: 1px solid rgba(255,255,255,.2);
-    color: var(--header-text);
+    border: 1px solid rgba(0,0,0,.08);
+    color: inherit;
     padding: 6px 10px;
     border-radius: 6px;
     cursor: pointer;
-    transition: background-color .15s, border-color .15s;
-}
-
-#theme-toggle:hover {
-    background-color: rgba(255,255,255,.1);
-}
-
-main {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 40px;
-}
-
-.hero, .perfil {
-    margin-bottom: 60px;
-}
-
-.hero h2, .perfil h2 {
-    margin-bottom: 20px;
-    font-size: 2rem;
-}
-
-.hero p, .perfil p {
-    margin-bottom: 20px;
-    font-size: 1.1rem;
+    transition: background-color .15s, border-color .15s, color .15s;
 }
 
 .cta-button{
     display: inline-block;
-    padding: 10px 16px;
+    padding: 10px 14px;
     background-color: var(--accent);
     color: #fff;
     border-radius: 6px;
     text-decoration: none;
     border: none;
     cursor: pointer;
-    margin-right: 10px;
-    transition: opacity .2s;
-}
-
-.cta-button:hover {
-    opacity: 0.9;
 }
 
 a:focus, button:focus {
     outline: 3px solid rgba(0,123,255,.25);
     outline-offset: 2px;
-}
-
-.habilidades {
-    margin-top: 40px;
-}
-
-.habilidades h3 {
-    margin-bottom: 20px;
-    font-size: 1.5rem;
-}
-
-.habilidades-list {
-    list-style: none;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-}
-
-.habilidades-list li {
-    padding: 20px;
-    background-color: #f5f5f5;
-    border-radius: 8px;
-    border-left: 4px solid var(--accent);
-}
-
-.habilidades-list h4 {
-    margin-bottom: 10px;
 }
 
 .projetos {
@@ -173,11 +90,6 @@ a:focus, button:focus {
     border: 1px solid #ccc;
     padding: 20px;
     border-radius: 8px;
-    transition: box-shadow .2s;
-}
-
-.projeto-item:hover {
-    box-shadow: 0 4px 12px rgba(0,0,0,.1);
 }
 
 @media (max-width: 1024px){
@@ -187,64 +99,27 @@ a:focus, button:focus {
 }
 
 @media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        gap: 20px;
-        padding: 20px;
-    }
-
-    nav {
-        margin: 0;
-    }
-
-    nav ul li {
-        margin-left: 15px;
-    }
-
     .projetos {
         grid-template-columns: 1fr;
-        padding: 20px;
     }
-
-    main {
-        padding: 20px;
-    }
-}
-
-footer {
-    background-color: #f5f5f5;
-    padding: 40px;
-    text-align: center;
-    border-top: 1px solid #ddd;
-    margin-top: 60px;
-}
-
-footer .social {
-    margin-bottom: 20px;
-}
-
-footer .social ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 10px;
-}
-
-footer a {
-    color: var(--accent);
-    text-decoration: none;
-}
-
-footer a:hover {
-    text-decoration: underline;
 }
 
 .dark-mode {
-    --bg: #1a1a1a;
-    --text: #f5f5f5;
-    --header-bg: #0d0d0d;
-    --header-text: #f5f5f5;
+    background-color: #1a1a1a;
+    color: #f5f5f5;
+}
+
+.dark-mode header {
+    background-color: #0d0d0d;
+}
+
+.dark-mode nav a {
+    color: #f5f5f5;
+}
+
+.dark-mode #theme-toggle {
+    color: #f5f5f5;
+    border-color: #f5f5f5;
 }
 
 .dark-mode .projeto-item {
@@ -253,15 +128,6 @@ footer a:hover {
 }
 
 .dark-mode .cta-button {
-    background-color: var(--accent);
-    color: #fff;
-}
-
-.dark-mode footer {
-    background-color: #0d0d0d;
-    border-top-color: #333;
-}
-
-.dark-mode .habilidades-list li {
-    background-color: #2c2c2c;
+    background-color: #f5f5f5;
+    color: #1a1a1a;
 }
