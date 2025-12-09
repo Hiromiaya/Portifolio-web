@@ -6,7 +6,7 @@
     const STORAGE_KEY = 'theme-preference';
 
     const initialTheme = localStorage.getItem(STORAGE_KEY) || 
-                         (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+                         (window.matchMedia('(color-scheme: dark)').matches ? 'dark' : 'light');
 
     function applyTheme(theme) {
         const isDark = theme === 'dark';
