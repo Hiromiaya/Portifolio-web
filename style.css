@@ -104,30 +104,30 @@ a:focus, button:focus {
     }
 }
 
-.dark-mode {
+.darkmode {
     background-color: #1a1a1a;
     color: #f5f5f5;
 }
 
-.dark-mode header {
+.darkmode header {
     background-color: #0d0d0d;
 }
 
-.dark-mode nav a {
+.darkmode nav a {
     color: #f5f5f5;
 }
 
-.dark-mode #theme-toggle {
+.darkmode #theme-toggle {
     color: #f5f5f5;
     border-color: #f5f5f5;
 }
 
-.dark-mode .projeto-item {
+.darkmode .projeto-item {
     background-color: #2c2c2c;
     border-color: #444;
 }
 
-.dark-mode .cta-button {
+.darkmode .cta-button {
     background-color: #f5f5f5;
     color: #1a1a1a;
 }
