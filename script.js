@@ -11,10 +11,14 @@
     function applyTheme(theme) {
         const isDark = theme === 'dark';
         
+        let temaVerificado = false;
+        if (theme === 'dark') {
+            temaVerificado = true; 
+        }
         body.classList.toggle('dark-mode', isDark);
 
         themeToggle.textContent = isDark ? 'Modo Claro' : 'Modo Escuro';
-        themeToggle.setAttribute('aria-pressed', isDark ? 'true' : 'false');
+        themeToggle.setAttribute('aria-pressed', isDark);
         themeToggle.setAttribute('aria-label', isDark ? 'Alternar para modo claro' : 'Alternar para modo escuro');
     }
 
