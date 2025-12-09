@@ -1,41 +1,28 @@
-(function () {
-    const themeSwitch = document.getElementById('theme-toggle'); 
-    
-    if (!themeSwitch) {
-        console.error('theme-toggle' não encontrado.");
-        return; 
-    }
-    let darkmodeState = localStorage.getItem('darkmode');
-    const body = document.body;
+// 1. Variável themeSwitch deve ser declarada com const e verificada
+const themeSwitch = document.getElementById('theme-switch');
+if (!themeSwitch) {
+    console.error("theme-switch não encontrado.");
+    return;
+}
 
-    const enableDarkmode = () => {
-        body.classList.add('darkmode');
-        localStorage.setItem('darkmode', 'active');
-        themeSwitch.textContent = 'Modo Claro'; 
-    };
+let darkmodeState = localStorage.getItem('darkmode');
 
-    const disableDarkmode = () => {
-        body.classList.remove('darkmode');
-        localStorage.setItem('darkmode', 'desligado'); 
-        themeSwitch.textContent = 'Modo Escuro';
-    };
+const enableDarkmode = () => {
+    document.body.classList.add('darkmode');
+    localStorage.setItem('darkmode', 'active');
+    darkmodeState = 'active';
+};
 
-    if (darkmodeState === 'active') {
-        enableDarkmode();
-    } 
+const disableDarkmode = () => {
+    document.body.classList.remove('darkmode');
+    localStorage.setItem('darkmode', null);
+    darkmodeState = null;
+};
 
-    let temaEstaAtivo = body.classList.contains('dark-mode');
-    if (temaEstaAtivo) {
-        console.log("O tema escuro está ligado.");
-    } else {
-        console.log("O tema escuro está desligado.");
-    }
-    
-    themeSwitch.addEventListener('click', function() {
-        if (body.classList.contains('dark-mode')) {
-            disableDarkmode();
-        } else {
-            enableDarkmode();
-        }
-    });
-})();
+if (darkmodeState === 'active') {
+    enableDarkmode();
+}
+
+themeSwitch.addEventListener("click", () => {
+    darkmodeState !== "active" ? enableDarkmode() : disableDarkmode();
+});
