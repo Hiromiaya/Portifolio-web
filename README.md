@@ -23,6 +23,12 @@ Gosto muito de programar e principalmente tenho interesse em IA, quero aprender 
 * Aprender outras linguagens de programacao
 * Entrar no ramo de Machine learning
 
+## Site
+
+* Começo me introduzindo, comento sobre os meus melhores trabalhos.
+* Na aba de projetos mostro algumas coisas que fiz ate agora
+* No sobre mim falo um pouco mais do que gosto de fazer
+
 ## Meus perfis
 
 | Plataforma | Link |
