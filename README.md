@@ -1,33 +1,27 @@
-# Olá, me chamo Isaac Alessandro Andrade Medeiros
+# 🚀 Portfólio Web | Isaac Alessandro
 
-## Sou estudante de Ciência da Computação
+## Visão Geral do Projeto
 
-### Primeiro período
+Este é o Portfólio Web pessoal de Isaac Alessandro. O objetivo deste projeto é apresentar as habilidades de desenvolvimento Front-end (HTML, CSS e JavaScript) e aderir às melhores práticas de desenvolvimento web moderno e acessibilidade.
 
-----------------------------------------------------------------------------------------------------------------
+O site é totalmente responsivo e inclui um recurso dinâmico para alternar entre os modos claro e escuro.
 
-## Sobre mim
+## 🛠️ Tecnologias Utilizadas
 
-Gosto muito de programar e principalmente tenho interesse em IA, quero aprender a estrutura das IA e me aprimorar nessa area
+* **HTML5 Semântico:** Utilizado para estruturação do conteúdo, focando na acessibilidade.
+    * **Layout:** Implementação de **Flexbox** e **Grid** para o layout bem estruturado.
+    * **Dark Mode:** Estilos de tema escuro definidos via CSS, ativados por JavaScript.
+* **JavaScript:** Lógica de alternância de tema e persistência de preferência via `localStorage`.
+* **Git & GitHub Pages:** Controle de versão e publicação do site online.
 
-* **Linguagem principal:** Python (Foco em IA e Estrutura de dados)
-* **Ferramentas:** Atualmente uso o vscode para todas as minhas programacoes
+## 💻 Estrutura e Critérios Mínimos
 
-## Objetivos atuais
+O projeto respeita todos os critérios estabelecidos:
 
-* Melhorar meu conhecimento em python e aprender mais uma nova linguagem
-* Aprender o basico para criacao de um site
-
-## Objetivos futuros
-
-* Aprender outras linguagens de programacao
-* Entrar no ramo de Machine learning
-
-## Site
-
-* Começo me introduzindo, comento sobre os meus melhores trabalhos.
-* Na aba de projetos mostro algumas coisas que fiz ate agora
-* No sobre mim falo um pouco mais do que gosto de fazer
+* **Navegação Simples:** O site possui três páginas principais (`index.html`, `projetos.html`, e `sobre.html`).
+* **Recurso em JavaScript:** O recurso de Modo Escuro.
+* **Marcação Válida:** O HTML segue o W3C Markup Validation Service.
+* **README:** Este arquivo documenta o projeto e faz parte de mais de um commit de atualização do conteúdo.
 
 ## Meus perfis
 
